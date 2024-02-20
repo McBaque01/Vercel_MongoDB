@@ -1,0 +1,56 @@
+Create BackEnd Folder for Backend Purposes.
+
+    In BackEnd
+
+        npm init -y
+
+    then install this
+
+        express
+        cors
+        helmet
+        nodemon
+    
+    then Install typescript on devDependencies
+
+        npm install typescript --save-dev
+
+    then create initialized tsconfig by command of
+
+        tsc --init
+
+    then configure this on tsconfig
+
+        "target": "ESNext"
+        "module": "ESNext",                                
+        "rootDir": "./src",                                  
+        "moduleResolution": "node",
+        "types": ["node", "helmet"], 
+        "outDir": "./build/js",
+        "noEmitOnError": true,
+
+    then add this to last part of tsconfig
+
+    
+        "include": [
+            "src/**/*.ts"
+        ],
+        "exclude": [
+            "node_modules"
+        ]
+
+    then in package.json
+
+        main:"Nameofyourdatabasehandlerfile.js"
+
+        then add this to scripts
+
+            "start": "nodemon Nameofyourdatabasehandlerfile.js"
+        
+        then add this after of script
+
+            "type": "module",
+
+        then install in devDependencies the types of your installed in dependescies
+
+            npm i @types/cors @types/express @types/helmet @types/node --save-dev
